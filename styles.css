@@ -4,9 +4,9 @@
    Palette: deep alpine navy · snow · glacier blue · alpenglow ember
    =========================================================== */
 :root{
-  --bg:#F4F8FC; --surface:#FFFFFF; --surface-2:#EAF2FA; --ink:#0B1A2B; --muted:#51647A;
-  --line:#DBE6F1; --sky:#1C74C0; --sky-deep:#123E63; --ember:#EF8C36; --ember-deep:#D9741D; --gold:#F6B45A;
-  --ring:rgba(28,116,192,.4);
+  --bg:#F1F8FC; --surface:#FFFFFF; --surface-2:#E3F1F8; --ink:#0A2130; --muted:#4E6474;
+  --line:#D3E5EF; --sky:#1B8CC0; --sky-brand:#78C8E0; --sky-deep:#0E4460; --ember:#F0913C; --ember-deep:#DA761E; --gold:#F6B45A;
+  --ring:rgba(27,140,192,.42);
   --shadow-sm:0 1px 2px rgba(11,26,43,.05);
   --shadow:0 2px 6px rgba(11,26,43,.05),0 16px 40px -22px rgba(11,26,43,.28);
   --shadow-lg:0 40px 80px -40px rgba(11,26,43,.45);
@@ -15,20 +15,20 @@
   --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Arial,sans-serif;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#081320;--surface:#0E1C2A;--surface-2:#132639;--ink:#EAF2F9;--muted:#94A8BB;
-    --line:#1C3348;--sky:#5AAAEA;--sky-deep:#2E77B5;--ember:#FF9E52;--ember-deep:#F0873A;--gold:#FFC072;
-    --ring:rgba(90,170,234,.45);
+  :root{--bg:#07161F;--surface:#0D2029;--surface-2:#123039;--ink:#E8F4F9;--muted:#93AEBB;
+    --line:#1B3540;--sky:#5FC0E6;--sky-brand:#8FD3EA;--sky-deep:#2E86B0;--ember:#FF9E52;--ember-deep:#F0873A;--gold:#FFC072;
+    --ring:rgba(95,192,230,.45);
     --shadow-sm:0 1px 2px rgba(0,0,0,.4);
     --shadow:0 2px 8px rgba(0,0,0,.35),0 20px 46px -24px rgba(0,0,0,.75);
     --shadow-lg:0 40px 80px -36px rgba(0,0,0,.85);}
 }
-:root[data-theme="light"]{--bg:#F4F8FC;--surface:#FFFFFF;--surface-2:#EAF2FA;--ink:#0B1A2B;--muted:#51647A;
-  --line:#DBE6F1;--sky:#1C74C0;--sky-deep:#123E63;--ember:#EF8C36;--ember-deep:#D9741D;--gold:#F6B45A;
-  --ring:rgba(28,116,192,.4);--shadow-sm:0 1px 2px rgba(11,26,43,.05);
+:root[data-theme="light"]{--bg:#F1F8FC;--surface:#FFFFFF;--surface-2:#E3F1F8;--ink:#0A2130;--muted:#4E6474;
+  --line:#D3E5EF;--sky:#1B8CC0;--sky-brand:#78C8E0;--sky-deep:#0E4460;--ember:#F0913C;--ember-deep:#DA761E;--gold:#F6B45A;
+  --ring:rgba(27,140,192,.42);--shadow-sm:0 1px 2px rgba(11,26,43,.05);
   --shadow:0 2px 6px rgba(11,26,43,.05),0 16px 40px -22px rgba(11,26,43,.28);--shadow-lg:0 40px 80px -40px rgba(11,26,43,.45);}
-:root[data-theme="dark"]{--bg:#081320;--surface:#0E1C2A;--surface-2:#132639;--ink:#EAF2F9;--muted:#94A8BB;
-  --line:#1C3348;--sky:#5AAAEA;--sky-deep:#2E77B5;--ember:#FF9E52;--ember-deep:#F0873A;--gold:#FFC072;
-  --ring:rgba(90,170,234,.45);--shadow-sm:0 1px 2px rgba(0,0,0,.4);
+:root[data-theme="dark"]{--bg:#07161F;--surface:#0D2029;--surface-2:#123039;--ink:#E8F4F9;--muted:#93AEBB;
+  --line:#1B3540;--sky:#5FC0E6;--sky-brand:#8FD3EA;--sky-deep:#2E86B0;--ember:#FF9E52;--ember-deep:#F0873A;--gold:#FFC072;
+  --ring:rgba(95,192,230,.45);--shadow-sm:0 1px 2px rgba(0,0,0,.4);
   --shadow:0 2px 8px rgba(0,0,0,.35),0 20px 46px -24px rgba(0,0,0,.75);--shadow-lg:0 40px 80px -36px rgba(0,0,0,.85);}
 
 *{box-sizing:border-box}
@@ -76,7 +76,7 @@ header.nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);back
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:600;font-size:1.15rem;
   letter-spacing:-.01em;text-decoration:none;color:#fff}
 header.nav.scrolled .brand{color:var(--ink)}
-.brand img{width:36px;height:36px;border-radius:9px;object-fit:cover;box-shadow:var(--shadow-sm)}
+.brand img{height:34px;width:auto;object-fit:contain}
 .nav-links{display:flex;gap:28px;margin-left:auto;align-items:center}
 .nav-links a{text-decoration:none;color:rgba(255,255,255,.82);font-weight:600;font-size:.93rem;padding:6px 0;position:relative;transition:color .18s}
 header.nav.scrolled .nav-links a{color:var(--muted)}
@@ -88,7 +88,7 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 .nav-toggle{display:none;margin-left:auto}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;background:#07121e;color:#EAF2F9;isolation:isolate;
+.hero{position:relative;overflow:hidden;background:#06141d;color:#EAF2F9;isolation:isolate;
   min-height:min(92vh,780px);display:flex;align-items:center;margin-top:-72px;padding-top:72px}
 .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;z-index:0;
   transform:scale(1.06);animation:heroZoom 20s ease-out forwards}
@@ -99,13 +99,13 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 .hero .grain{position:absolute;inset:0;z-index:1;opacity:.06;pointer-events:none;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .hero-in{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:96px 28px 132px;width:100%}
-.hero .eyebrow{color:#8FD0FF}
+.hero .eyebrow{color:var(--sky-brand)}
 .hero h1{font-size:clamp(2.9rem,6.8vw,5.6rem);font-weight:500;line-height:1.0;letter-spacing:-.02em;margin:0 0 24px}
 .hero p.lead{font-size:clamp(1.08rem,1.65vw,1.34rem);line-height:1.55;max-width:46ch;color:#CFDFEC;margin:0 0 36px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .hero-note{margin-top:28px;font-size:.92rem;color:#A9BDCE;display:flex;align-items:center;gap:11px}
-.hero-note .tag{font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.08em;color:#0B1A2B;
-  background:#8FD0FF;border-radius:999px;padding:4px 10px}
+.hero-note .tag{font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.08em;color:#06141d;
+  background:var(--sky-brand);border-radius:999px;padding:4px 10px}
 .hero .ridge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(52px,7vw,104px);z-index:2;display:block}
 .hero .ridge path{fill:var(--bg)}
 
@@ -141,7 +141,7 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 .benefit .ic svg{width:23px;height:23px;stroke:var(--sky);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .benefit .ic.ember{background:color-mix(in srgb,var(--ember) 20%,transparent)}
 .benefit .ic.ember svg{stroke:var(--ember-deep)}
-.benefit.accent{background:linear-gradient(160deg,var(--sky-deep),#0c2c48);border:none;color:#fff}
+.benefit.accent{background:linear-gradient(160deg,var(--sky-deep),#082b3d);border:none;color:#fff}
 .benefit.accent p{color:#c6dcee}
 .benefit h3{font-family:var(--display);font-size:1.24rem;font-weight:600;letter-spacing:-.01em;margin-bottom:8px}
 .benefit p{margin:0;color:var(--muted);font-size:.96rem;line-height:1.55}
@@ -167,7 +167,7 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 .qc::before{content:"\201C";position:absolute;top:14px;left:24px;font-family:var(--display);font-size:3.4rem;line-height:1;color:var(--ember);opacity:.5}
 .qc blockquote{margin:0;padding-top:26px;font-family:var(--display);font-style:italic;font-weight:400;
   font-size:1.14rem;line-height:1.5;color:var(--ink)}
-.qc.feature{grid-column:span 3;background:linear-gradient(135deg,var(--sky-deep),#0b2942 70%);color:#fff;border:none;
+.qc.feature{grid-column:span 3;background:linear-gradient(135deg,var(--sky-deep),#07242f 70%);color:#fff;border:none;
   padding:44px 46px;display:flex;flex-direction:column;justify-content:center}
 .qc.feature::before{color:var(--gold);opacity:.6;font-size:4.2rem;top:18px;left:34px}
 .qc.feature blockquote{font-size:clamp(1.3rem,2.2vw,1.72rem);line-height:1.42;max-width:46ch}
@@ -215,7 +215,7 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 .founder .role{color:var(--sky);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;margin-top:6px}
 
 /* Donate band */
-.band{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(125deg,var(--sky-deep),#0b2840 58%,#0a2035);
+.band{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(125deg,var(--sky-deep),#0a2d3f 58%,#06202c);
   color:#fff;padding:76px 44px;text-align:center;box-shadow:var(--shadow-lg)}
 .band h2{font-size:clamp(2rem,4vw,3rem);font-weight:600;margin-bottom:16px;color:#fff}
 .band .eyebrow{color:var(--gold)}
