@@ -92,25 +92,48 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 .nav-toggle{display:none;margin-left:auto}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;background:#06141d;color:#EAF2F9;isolation:isolate;
+.hero{position:relative;overflow:hidden;color:#EAF2F9;isolation:isolate;
+  background:linear-gradient(158deg,#050e16 0%,#0b2230 44%,#123c53 78%,#0E4460 100%);
   min-height:min(92vh,780px);display:flex;align-items:center;margin-top:-72px;padding-top:72px}
-.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;z-index:0;
-  transform:scale(1.06);animation:heroZoom 20s ease-out forwards}
-@keyframes heroZoom{to{transform:scale(1)}}
+/* living twilight glows */
+.hero .sky-glow{position:absolute;inset:-25%;z-index:0;pointer-events:none}
+.hero .sky-glow span{position:absolute;border-radius:50%;filter:blur(70px)}
+.hero .sky-glow .g1{width:62vw;height:62vw;left:-8%;top:-18%;
+  background:radial-gradient(circle,rgba(120,200,224,.4),transparent 68%);animation:skyDrift1 22s ease-in-out infinite alternate}
+.hero .sky-glow .g2{width:58vw;height:58vw;right:-10%;bottom:-22%;
+  background:radial-gradient(circle,rgba(27,140,192,.48),transparent 70%);animation:skyDrift2 28s ease-in-out infinite alternate}
+.hero .sky-glow .g3{width:40vw;height:40vw;left:34%;top:2%;
+  background:radial-gradient(circle,rgba(143,211,234,.26),transparent 72%);animation:skyDrift3 34s ease-in-out infinite alternate}
+@keyframes skyDrift1{from{transform:translate(0,0) scale(1)}to{transform:translate(8%,6%) scale(1.15)}}
+@keyframes skyDrift2{from{transform:translate(0,0) scale(1.05)}to{transform:translate(-7%,-5%) scale(1)}}
+@keyframes skyDrift3{from{transform:translate(0,0)}to{transform:translate(-6%,8%)}}
+.hero .stars{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(1.4px 1.4px at 20% 22%,#cfeaf6 40%,transparent),
+    radial-gradient(1.2px 1.2px at 68% 14%,#bfe4f2 40%,transparent),
+    radial-gradient(1px 1px at 42% 28%,#e6f5fb 40%,transparent),
+    radial-gradient(1.3px 1.3px at 82% 24%,#bfe4f2 40%,transparent),
+    radial-gradient(1px 1px at 12% 38%,#d8f0f8 40%,transparent),
+    radial-gradient(1.1px 1.1px at 55% 20%,#cfeaf6 40%,transparent);
+  animation:skyTwinkle 6s ease-in-out infinite alternate}
+@keyframes skyTwinkle{from{opacity:.25}to{opacity:.55}}
+.hero .snow{position:absolute;inset:0;z-index:2;pointer-events:none}
 .hero .veil{position:absolute;inset:0;z-index:1;background:
-  linear-gradient(92deg,rgba(5,13,22,.95) 0%,rgba(5,13,22,.78) 42%,rgba(5,13,22,.32) 100%),
-  linear-gradient(0deg,rgba(5,13,22,.85),transparent 46%)}
+  linear-gradient(96deg,rgba(5,13,22,.74) 0%,rgba(5,13,22,.45) 44%,rgba(5,13,22,.05) 100%),
+  linear-gradient(0deg,rgba(5,13,22,.6),transparent 46%)}
 .hero .grain{position:absolute;inset:0;z-index:1;opacity:.06;pointer-events:none;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero-in{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:96px 28px 132px;width:100%}
+.hero-in{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;padding:96px 28px 132px;width:100%}
 .hero .eyebrow{color:var(--sky-brand)}
 .hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem);font-weight:700;line-height:1.04;letter-spacing:-.035em;margin:0 0 24px}
+.hero h1 .accent{color:transparent;background:linear-gradient(100deg,#8FD3EA 12%,#eaf7fc 46%,#8FD3EA 80%);
+  -webkit-background-clip:text;background-clip:text;background-size:220% 100%;animation:heroShimmer 5.5s ease-in-out 1.2s infinite}
+@keyframes heroShimmer{0%,100%{background-position:0 0}50%{background-position:100% 0}}
 .hero p.lead{font-size:clamp(1.08rem,1.65vw,1.34rem);line-height:1.55;max-width:46ch;color:#CFDFEC;margin:0 0 36px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .hero-note{margin-top:28px;font-size:.92rem;color:#A9BDCE;display:flex;align-items:center;gap:11px}
 .hero-note .tag{font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.08em;color:#06141d;
   background:var(--sky-brand);border-radius:999px;padding:4px 10px}
-.hero .ridge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(36px,4.5vw,72px);z-index:2;display:block}
+.hero .ridge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(36px,4.5vw,72px);z-index:3;display:block}
 .hero .ridge path{fill:var(--bg)}
 
 /* Reveal */
@@ -330,7 +353,8 @@ footer.ft{background:var(--surface);border-top:1px solid var(--line);margin-top:
 }
 @media (prefers-reduced-motion:reduce){
   .fade{transition:none;opacity:1;transform:none}
-  .hero .bg{animation:none;transform:none}
+  .hero .sky-glow span,.hero .stars,.hero h1 .accent{animation:none}
+  .hero h1 .accent{color:#8FD3EA;-webkit-text-fill-color:#8FD3EA}
   html{scroll-behavior:auto}
   .founder:hover .pic img{transform:none}
 }
