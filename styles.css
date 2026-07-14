@@ -53,6 +53,10 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;line-height:1.1;
 .sec-head h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:700}
 .sec-head p{color:var(--muted);font-size:1.14rem;margin:18px 0 0;line-height:1.6}
 .sec-head.ctr p{margin-left:auto;margin-right:auto}
+.sec-head.split{max-width:none;display:grid;grid-template-columns:1.05fr .95fr;column-gap:60px;align-items:end}
+.sec-head.split .eyebrow{grid-column:1;grid-row:1;margin-bottom:14px}
+.sec-head.split h2{grid-column:1;grid-row:2;margin:0}
+.sec-head.split p{grid-column:2;grid-row:2;margin:0;max-width:48ch;padding-bottom:5px}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:700;font-size:.96rem;
@@ -306,6 +310,8 @@ footer.ft{background:var(--surface);border-top:1px solid var(--line);margin-top:
   .ft-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .sec{padding:80px 0}
   .band{padding:56px 28px}
+  .sec-head.split{display:block;max-width:44ch}
+  .sec-head.split p{margin-top:18px;max-width:none;padding-bottom:0}
 }
 @media (max-width:600px){
   body{font-size:16px}
