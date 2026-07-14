@@ -44,7 +44,7 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;line-height:1.1;
   color:var(--sky);margin:0 0 16px;display:inline-block}
 
 /* Section rhythm */
-.sec{padding:104px 0}
+.sec{padding:76px 0}
 .sec.tint{background:var(--surface-2)}
 .stats-sec{padding:56px 0 64px}
 .donate-sec{padding:40px 0 8px}
@@ -308,7 +308,7 @@ footer.ft{background:var(--surface);border-top:1px solid var(--line);margin-top:
   .partners{grid-template-columns:repeat(2,minmax(0,1fr))}
   .founders{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none}
   .ft-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .sec{padding:80px 0}
+  .sec{padding:64px 0}
   .band{padding:56px 28px}
   .sec-head.split{display:block;max-width:44ch}
   .sec-head.split p{margin-top:18px;max-width:none;padding-bottom:0}
