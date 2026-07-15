@@ -231,8 +231,8 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 
 /* Sponsors */
 .logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:50px}
-.logo-tile{background:#fff;border:1px solid var(--line);border-radius:16px;aspect-ratio:3/2;display:grid;place-items:center;
-  padding:24px;box-shadow:var(--shadow-sm);transition:transform .22s,box-shadow .22s}
+.logo-tile{background:#fff;border:1px solid var(--line);border-radius:16px;height:150px;display:flex;align-items:center;justify-content:center;
+  padding:24px;box-shadow:var(--shadow-sm);transition:transform .22s,box-shadow .22s;overflow:hidden}
 .logo-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .logo-tile img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:none;opacity:1}
 .partners-head{text-align:center;margin-top:72px}
