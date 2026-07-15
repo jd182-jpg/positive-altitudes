@@ -234,14 +234,7 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
 .logo-tile{background:#fff;border:1px solid var(--line);border-radius:16px;aspect-ratio:3/2;display:grid;place-items:center;
   padding:24px;box-shadow:var(--shadow-sm);transition:transform .22s,box-shadow .22s}
 .logo-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.logo-tile img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:none;opacity:1;transition:filter .3s,opacity .3s}
-.logo-tile.dark{background:#0b1a2b}
-/* greyscale-until-hover only on devices that can hover (desktop); touch shows full colour */
-@media (hover:hover){
-  .logo-tile img{filter:grayscale(1);opacity:.66}
-  .logo-tile:hover img{filter:none;opacity:1}
-  .logo-tile.dark img{filter:none;opacity:1}
-}
+.logo-tile img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:none;opacity:1}
 .partners-head{text-align:center;margin-top:72px}
 .partners-head p{color:var(--muted);margin:2px 0 0;font-size:1.05rem}
 .partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
