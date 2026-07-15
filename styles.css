@@ -298,6 +298,33 @@ header.nav.scrolled .nav-links a.active{color:var(--ink)}
   background:radial-gradient(circle,rgba(246,180,90,.4),transparent 62%);top:-220px;right:-150px;z-index:0}
 .band>*{position:relative;z-index:1}
 .band .btnrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+/* embedded donation form */
+.donate-form{max-width:440px;margin:8px auto 0;background:#fff;border-radius:18px;padding:22px 22px 20px;
+  text-align:left;box-shadow:0 24px 60px -28px rgba(0,0,0,.65)}
+.amt-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.amt{padding:12px 0;border:1.5px solid #d3e5ef;border-radius:12px;background:#f4fafd;color:#0A2130;
+  font-family:var(--sans);font-weight:700;font-size:1rem;cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s}
+.amt:hover{border-color:var(--sky)}
+.amt.sel{border-color:var(--sky);background:#e3f1f8;color:var(--sky-deep);box-shadow:0 0 0 2px rgba(27,140,192,.3) inset}
+.amt-custom{grid-column:span 4;display:flex;align-items:center;gap:6px;border:1.5px solid #d3e5ef;
+  border-radius:12px;padding:0 12px;background:#f4fafd}
+.amt-custom span{color:#4E6474;font-weight:700}
+.amt-custom input{border:none;background:transparent;padding:11px 0;font-size:1rem;font-family:var(--sans);
+  width:100%;color:#0A2130;outline:none;-moz-appearance:textfield}
+.amt-custom input::-webkit-outer-spin-button,.amt-custom input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+#card-container{margin:4px 0 14px;min-height:46px}
+.donate-form .btn-donate{width:100%;justify-content:center;font-size:1.02rem;padding:14px}
+.donate-form .btn-donate:disabled{opacity:.6;cursor:default;transform:none}
+.pay-status{margin:12px 0 0;font-size:.9rem;color:#4E6474;min-height:1.1em;text-align:center}
+.pay-secure{display:flex;align-items:center;justify-content:center;gap:7px;margin:14px 0 0;
+  font-size:.78rem;color:#5c7488;line-height:1.4}
+.pay-secure svg{width:15px;height:15px;fill:none;stroke:#5c7488;stroke-width:1.8;flex:none}
+.pay-thanks{background:#fff;border-radius:18px;padding:30px 26px;color:#0A2130;text-align:center;
+  font-size:1.06rem;line-height:1.55;max-width:440px;margin:8px auto 0}
+.pay-thanks strong{color:var(--sky-deep)}
+.partner-link{display:inline-block;margin-top:20px;color:var(--sky-brand);font-weight:600;
+  text-decoration:none;font-size:.95rem}
+.partner-link:hover{text-decoration:underline}
 
 /* Footer */
 footer.ft{background:var(--surface);border-top:1px solid var(--line);margin-top:96px;padding:64px 0 42px}
