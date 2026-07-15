@@ -1,0 +1,11 @@
+name = "pa-donate"
+main = "worker.js"
+compatibility_date = "2024-10-01"
+
+# Non-secret variables (safe to keep here).
+# Set SQUARE_ACCESS_TOKEN as a SECRET instead — never put it in this file:
+#   wrangler secret put SQUARE_ACCESS_TOKEN
+[vars]
+SQUARE_LOCATION_ID = "REPLACE_WITH_YOUR_LOCATION_ID"
+SQUARE_ENV = "production"
+ALLOWED_ORIGIN = "https://positivealtitudes.org"
